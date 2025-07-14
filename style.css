@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Variáveis de Cores */
+:root {
+    --cor-fundo: #111827;
+    --cor-fundo-card: #1f2937;
+    --cor-texto: #f9fafb;
+    --cor-texto-secundario: #9ca3af;
+    --cor-destaque: #8b5cf6;
+    --cor-destaque-hover: #7c3aed;
+}
+
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+h1, h2, h3 {
+    color: var(--cor-texto);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
+/* Header (Cabeçalho) */
+header {
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 1.5rem;
+}
+
+header nav ul li a {
+    color: var(--cor-texto);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Seção Home */
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#home .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home .foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--cor-destaque);
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+#home h1 {
+    font-size: 3rem;
+}
+
+#home p {
+    font-size: 1.5rem;
+    color: var(--cor-texto-secundario);
+}
+
+.maquina-escrever {
+    color: var(--cor-destaque);
+    font-weight: 600;
+}
+
+/* Seção Sobre */
+#sobre .container p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    font-size: 1.1rem;
+}
+
+/* Seção Habilidades */
+#habilidades .habilidades-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#habilidades .habilidade-item {
+    background: var(--cor-fundo-card);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+#habilidades .habilidade-item:hover {
+    transform: translateY(-5px);
+    background: var(--cor-destaque);
+}
+
+/* ================================================= */
+/* === SEÇÃO PROJETOS (LAYOUT NOVO - 2 COLUNAS) ==== */
+/* ================================================= */
+
+#projetos .projetos-container {
+    display: grid;
+    gap: 3rem; /* Espaço entre os cards */
+    margin-top: 3rem;
+}
+
+#projetos .projeto-card-novo {
+    display: flex; /* A MÁGICA ACONTECE AQUI: coloca os itens lado a lado */
+    align-items: center; /* Alinha verticalmente o texto e a imagem */
+    gap: 2rem; /* Espaço entre a coluna de texto e a de imagem */
+    background-color: var(--cor-fundo-card);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projetos .projeto-card-novo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Coluna de texto (esquerda) */
+#projetos .texto-projeto {
+    flex: 1; /* Faz a coluna de texto ocupar o espaço disponível */
+    /* Para o layout de imagem na direita, usamos order: 1; */
+}
+
+#projetos .texto-projeto h3 {
+    font-size: 2rem;
+    color: var(--cor-texto);
+}
+
+#projetos .descricao-projeto {
+    color: var(--cor-texto-secundario);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#projetos .tags-projeto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#projetos .tags-projeto span {
+    background-color: rgba(139, 92, 246, 0.2); /* Fundo da tag com transparência */
+    color: var(--cor-destaque);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px; /* Deixa a tag arredondada */
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Botão do projeto */
+#projetos .btn-projeto {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--cor-texto-secundario);
+    border-radius: 5px;
+    color: var(--cor-texto);
+    font-weight: 600;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#projetos .btn-projeto:hover {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+}
+
+/* Coluna de imagem (direita) */
+#projetos .imagem-container-projeto {
+    flex: 1.2; /* Faz a imagem ocupar um pouco mais de espaço */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#projetos .imagem-container-projeto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Inverte a ordem para cards alternados */
+#projetos .projeto-card-novo:nth-child(even) {
+    flex-direction: row-reverse; /* Inverte a direção do flex */
+}
+
+
+/* === AJUSTES PARA TELAS MENORES (RESPONSIVIDADE) === */
+@media (max-width: 900px) {
+    #projetos .projeto-card-novo {
+        flex-direction: column; /* Coloca a imagem embaixo do texto */
+    }
+
+    #projetos .projeto-card-novo:nth-child(even) {
+        flex-direction: column; /* Garante que todos fiquem na mesma ordem */
+    }
+
+    #projetos .texto-projeto {
+        order: 2; /* Garante que o texto venha depois da imagem */
+    }
+
+    #projetos .imagem-container-projeto {
+        order: 1;
+        width: 100%;
+    }
+}
+
+/* Seção Contato */
+#contato .container {
+    text-align: center;
+}
+
+#contato p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+#contato .contatos-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+#contato .contato-link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--cor-texto);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contato .contato-link:hover {
+    color: var(--cor-destaque);
+    transform: translateY(-5px);
+}
+
+#contato .contato-link svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--cor-fundo-card);
+    color: var(--cor-texto-secundario);
+}
+
+/* Estilos para telas menores (Responsividade) */
+@media (max-width: 768px) {
+    #projetos .projetos-grid {
+        /* Garante uma coluna em telas menores */
+        grid-template-columns: 1fr;
+    }
+    
+    header nav ul {
+       /* Em uma próxima etapa, poderíamos criar um menu hambúrguer aqui */
+       display: none;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+}
