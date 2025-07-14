@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Variáveis de Cores */
 :root {
     --cor-fundo: #111827;
     --cor-fundo-card: #1f2937;
@@ -10,7 +9,6 @@
     --cor-destaque-hover: #7c3aed;
 }
 
-/* Estilos Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -49,7 +47,6 @@ a {
     text-decoration: none;
 }
 
-/* Header (Cabeçalho) */
 header {
     background: rgba(17, 24, 39, 0.8);
     backdrop-filter: blur(10px);
@@ -89,7 +86,6 @@ header nav ul li a:hover {
     color: var(--cor-destaque);
 }
 
-/* Seção Home */
 #home {
     height: 100vh;
     display: flex;
@@ -126,7 +122,6 @@ header nav ul li a:hover {
     font-weight: 600;
 }
 
-/* Seção Sobre */
 #sobre .container p {
     max-width: 700px;
     margin: 0 auto;
@@ -135,7 +130,6 @@ header nav ul li a:hover {
     font-size: 1.1rem;
 }
 
-/* Seção Habilidades */
 #habilidades .habilidades-grid {
     display: flex;
     justify-content: center;
@@ -157,20 +151,16 @@ header nav ul li a:hover {
     background: var(--cor-destaque);
 }
 
-/* ================================================= */
-/* === SEÇÃO PROJETOS (LAYOUT NOVO - 2 COLUNAS) ==== */
-/* ================================================= */
-
 #projetos .projetos-container {
     display: grid;
-    gap: 3rem; /* Espaço entre os cards */
+    gap: 3rem;
     margin-top: 3rem;
 }
 
 #projetos .projeto-card-novo {
-    display: flex; /* A MÁGICA ACONTECE AQUI: coloca os itens lado a lado */
-    align-items: center; /* Alinha verticalmente o texto e a imagem */
-    gap: 2rem; /* Espaço entre a coluna de texto e a de imagem */
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     background-color: var(--cor-fundo-card);
     padding: 2rem;
     border-radius: 15px;
@@ -182,10 +172,8 @@ header nav ul li a:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Coluna de texto (esquerda) */
 #projetos .texto-projeto {
-    flex: 1; /* Faz a coluna de texto ocupar o espaço disponível */
-    /* Para o layout de imagem na direita, usamos order: 1; */
+    flex: 1;
 }
 
 #projetos .texto-projeto h3 {
@@ -207,15 +195,14 @@ header nav ul li a:hover {
 }
 
 #projetos .tags-projeto span {
-    background-color: rgba(139, 92, 246, 0.2); /* Fundo da tag com transparência */
+    background-color: rgba(139, 92, 246, 0.2);
     color: var(--cor-destaque);
     padding: 0.3rem 0.8rem;
-    border-radius: 999px; /* Deixa a tag arredondada */
+    border-radius: 999px;
     font-size: 0.8rem;
     font-weight: 600;
 }
 
-/* Botão do projeto */
 #projetos .btn-projeto {
     display: inline-flex;
     align-items: center;
@@ -233,38 +220,30 @@ header nav ul li a:hover {
     border-color: var(--cor-destaque);
 }
 
-/* Coluna de imagem (direita) */
 #projetos .imagem-container-projeto {
-    flex: 1.2; /* Faz a imagem ocupar um pouco mais de espaço */
+    flex: 1.2;
     border-radius: 10px;
     overflow: hidden;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #projetos .imagem-container-projeto img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
-/* Inverte a ordem para cards alternados */
-#projetos .projeto-card-novo:nth-child(even) {
-    flex-direction: row-reverse; /* Inverte a direção do flex */
-}
-
-
-/* === AJUSTES PARA TELAS MENORES (RESPONSIVIDADE) === */
 @media (max-width: 900px) {
     #projetos .projeto-card-novo {
-        flex-direction: column; /* Coloca a imagem embaixo do texto */
-    }
-
-    #projetos .projeto-card-novo:nth-child(even) {
-        flex-direction: column; /* Garante que todos fiquem na mesma ordem */
+        flex-direction: column;
     }
 
     #projetos .texto-projeto {
-        order: 2; /* Garante que o texto venha depois da imagem */
+        order: 2;
     }
 
     #projetos .imagem-container-projeto {
@@ -273,7 +252,6 @@ header nav ul li a:hover {
     }
 }
 
-/* Seção Contato */
 #contato .container {
     text-align: center;
 }
@@ -309,7 +287,6 @@ header nav ul li a:hover {
     margin-bottom: 0.5rem;
 }
 
-/* Rodapé */
 footer {
     text-align: center;
     padding: 2rem 0;
@@ -317,15 +294,12 @@ footer {
     color: var(--cor-texto-secundario);
 }
 
-/* Estilos para telas menores (Responsividade) */
 @media (max-width: 768px) {
     #projetos .projetos-grid {
-        /* Garante uma coluna em telas menores */
         grid-template-columns: 1fr;
     }
     
     header nav ul {
-       /* Em uma próxima etapa, poderíamos criar um menu hambúrguer aqui */
        display: none;
     }
 
