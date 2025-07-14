@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Raul Rodrigues | Portfólio</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --cor-fundo: #111827;
+            --cor-fundo-card: #1f2937;
+            --cor-texto: #f9fafb;
+            --cor-texto-secundario: #9ca3af;
+            --cor-destaque: #8b5cf6;
+            --cor-destaque-hover: #7c3aed;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+        
+        h1, h2, h3 {
+            color: var(--cor-texto);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+        }
+
+        header {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        header nav ul li a {
+            color: var(--cor-texto);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: var(--cor-destaque);
+        }
+
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        
+        #home .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #home .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--cor-destaque);
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+        }
+        
+        #home p {
+            font-size: 1.5rem;
+            color: var(--cor-texto-secundario);
+        }
+        
+        .maquina-escrever {
+            color: var(--cor-destaque);
+            font-weight: 600;
+        }
+        
+        #sobre .container p {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--cor-texto-secundario);
+            font-size: 1.1rem;
+        }
+        
+        #habilidades .habilidades-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        #habilidades .habilidade-item {
+            background: var(--cor-fundo-card);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        #habilidades .habilidade-item:hover {
+            transform: translateY(-5px);
+            background: var(--cor-destaque);
+        }
+        
+        #projetos .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        #projetos .projeto-card {
+            background: var(--cor-fundo-card);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #projetos .projeto-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* NOVO: Estilo da imagem do projeto */
+        #projetos .projeto-imagem {
+            width: 100%;
+            height: 200px; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+        }
+        
+        #projetos .projeto-card .card-content {
+            padding: 1.5rem;
+            flex-grow: 1; /* Faz o conteúdo crescer para preencher o espaço */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #projetos .projeto-card h3 {
+            font-size: 1.5rem;
+        }
+        
+        #projetos .projeto-card p {
+            color: var(--cor-texto-secundario);
+            margin-bottom: 1rem;
+        }
+        
+        #projetos .projeto-card .links a {
+            margin-right: 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        #projetos .projeto-card .links a:hover {
+            color: var(--cor-destaque-hover);
+        }
+        
+        /* NOVO: Estilos para a seção de contato */
+        #contato .container {
+            text-align: center;
+        }
+        
+        #contato p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        #contato .contatos-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        #contato .contato-link {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: var(--cor-texto);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        #contato .contato-link:hover {
+            color: var(--cor-destaque);
+            transform: translateY(-5px);
+        }
+
+        #contato .contato-link svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--cor-fundo-card);
+            color: var(--cor-texto-secundario);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#home" class="logo">Raul Rodrigues</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEm9obyZek7hw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712661307202?e=1758153600&v=beta&t=uS2xtF79s_jTxSaUiRcTDagR8LmBu4HWTuCIUJjeB6o" alt="Foto de Perfil" class="foto-perfil">
+                <h1>Raul Rodrigues</h1>
+                <p>Eu sou <span class="maquina-escrever"></span></p>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Olá! Sou Raul, um estudante de Sistemas de Informação apaixonado por tecnologia e programação. 
+                    Tenho focado meus estudos no desenvolvimento back-end com Java e C#, mas também tenho experiência com Python e desenvolvimento web. 
+                    Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.
+                </p>
+            </div>
+        </section>
+        
+        <section id="habilidades">
+            <div class="container">
+                <h2>Habilidades</h2>
+                <div class="habilidades-grid">
+                    <div class="habilidade-item">Java</div>
+                    <div class="habilidade-item">C#</div>
+                    <div class="habilidade-item">Python</div>
+                    <div class="habilidade-item">HTML & CSS</div>
+                    <div class="habilidade-item">JavaScript</div>
+                    <div class="habilidade-item">SQL</div>
+                    <div class="habilidade-item">Git & GitHub</div>
+                    <div class="habilidade-item">Spring Boot</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <div class="container">
+                <h2>Meus Projetos</h2>
+                <div class="projetos-grid">
+                    
+                    <div class="projeto-card">
+                        <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Xadrez" alt="Imagem do Projeto Xadrez" class="projeto-imagem">
+                        <div class="card-content">
+                            <div>
+                                <h3>Sistema de Xadrez</h3>
+                                <p>Um jogo de xadrez completo construído em Java com interface gráfica, focado na lógica e nas regras do jogo.</p>
+                            </div>
+                            <div class="links">
+                                <a href="https://github.com/raaulrodrigues/chess-system-java" target="_blank">Código no GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projeto-card">
+                        <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=Bloco+de+Notas" alt="Imagem do Bloco de Notas" class="projeto-imagem">
+                        <div class="card-content">
+                             <div>
+                                <h3>Bloco de Notas</h3>
+                                <p>Um editor de texto simples, similar ao Bloco de Notas do Windows, desenvolvido em C# com Windows Forms.</p>
+                            </div>
+                            <div class="links">
+                                <a href="https://github.com/raaulrodrigues/BlocoDeNotas" target="_blank">Código no GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="projeto-card">
+                        <img src="https://via.placeholder.com/400x250/3b82f6/ffffff?text=Calculadora" alt="Imagem da Calculadora" class="projeto-imagem">
+                        <div class="card-content">
+                            <div>
+                                <h3>Calculadora Python</h3>
+                                <p>Uma calculadora com as operações básicas, desenvolvida em Python utilizando a biblioteca Tkinter para a interface gráfica.</p>
+                            </div>
+                            <div class="links">
+                                <a href="https://github.com/raaulrodrigues/Calculadora" target="_blank">Código no GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Estou aberto a novas oportunidades e colaborações. Vamos conversar!</p>
+                
+                <div class="contatos-wrapper">
+                    
+                    <a href="mailto:rm.rodrigues0307@gmail.com" target="_blank" class="contato-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>E-mail</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/raaul-rodriguees/" target="_blank" class="contato-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="https://wa.me/5516997542792" target="_blank" class="contato-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>Telefone</span>
+                    </a>
+
+                    <a href="https://github.com/raaulrodrigues" target="_blank" class="contato-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Raul Rodrigues. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <script>
+        var options = {
+            strings: [
+                'Desenvolvedor Back-End', 
+                'Estudante de SI', 
+                'Entusiasta de Java e C#'
+            ],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        };
+
+        var typed = new Typed('.maquina-escrever', options);
+    </script>
+
+</body>
+</html>
