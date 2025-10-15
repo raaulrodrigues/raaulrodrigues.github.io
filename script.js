@@ -1,9 +1,9 @@
 var options = {
  
     strings: [
-        'desenvolvedor Back-End', 
-        'estudante de SI', 
-        'entusiasta de Java e C#'
+        'desenvolvedor Full-Stack', 
+        'estudante de Sistema de Informação', 
+        'entusiasta de Java e Python'
     ],
     typeSpeed: 50, 
     backSpeed: 25, 
