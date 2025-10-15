@@ -1,150 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raul Martins Rodrigues | Portfólio</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raul Martins Rodrigues | Portfólio</title>
+  <link rel="icon" href="./assets/icon/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
+  <header>
+    <div class="container">
+      <a href="#home" class="logo">Raul Martins Rodrigues</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-        <div class="container">
-            <a href="#home" class="logo">Raul Martins Rodrigues</a>
-            <nav>
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+  <main>
+    <section id="home">
+      <div class="container">
+        <img src="./assets/images/perfil.png" alt="Foto de Perfil" class="foto-perfil" />
+        <h1>Raul Martins Rodrigues</h1>
+        <p>Eu sou <span class="maquina-escrever"></span></p>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Sou Raul Martins Rodrigues, um estudante de Sistemas de Informação apaixonado por tecnologia e programação. Tenho focado meus estudos no desenvolvimento back-end com Java e Python, mas também tenho conhecimento em C#, React, Spring e desenvolvimento web. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.</p>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <div class="container">
+        <h2>Habilidades</h2>
+        <div class="habilidades-grid">
+          <div class="habilidade-item">Java</div>
+          <div class="habilidade-item">C#</div>
+          <div class="habilidade-item">Python</div>
+          <div class="habilidade-item">HTML & CSS</div>
+          <div class="habilidade-item">JavaScript</div>
+          <div class="habilidade-item">SQL</div>
+          <div class="habilidade-item">Git & GitHub</div>
+          <div class="habilidade-item">Spring Boot</div>
+          <div class="habilidade-item">React</div>
+          <div class="habilidade-item">TypeScript</div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section id="home">
-            <div class="container">
-                <img src="./assets/images/perfil.png" alt="Foto de Perfil" class="foto-perfil">
-                <h1>Raul Martins Rodrigues</h1>
-                <p>Eu sou <span class="maquina-escrever"></span></p>
+    <section id="projetos">
+      <div class="container">
+        <h2>Meus Projetos</h2>
+        <div class="projetos-container">
+
+          <div class="projeto-card-novo">
+            <div class="texto-projeto">
+              <h3>Sistema de Xadrez</h3>
+              <p class="descricao-projeto">Um jogo de xadrez completo construído em Java com interface gráfica, focado na lógica e nas regras do jogo.</p>
+              <div class="tags-projeto"><span>Java</span><span>OOP</span></div>
+              <a href="https://github.com/raaulrodrigues/Xadrez.git" target="_blank" class="btn-projeto">Ver no GitHub
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
             </div>
-        </section>
+            <div class="imagem-container-projeto"><img src="./assets/images/xadrez.jpg" alt="Imagem do Projeto Xadrez" /></div>
+          </div>
 
-        <section id="sobre">
-            <div class="container">
-                <h2>Sobre Mim</h2>
-                <p>
-                    Olá! Sou Raul Martins Rodrigues, um estudante de Sistemas de Informação apaixonado por tecnologia e programação. 
-                    Tenho focado meus estudos no desenvolvimento back-end com Java e Python, mas também tenho conhecimento em C#, React, Spring e desenvolvimento web.
-                    Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.
-                </p>
+          <div class="projeto-card-novo">
+            <div class="texto-projeto">
+              <h3>Pokédex</h3>
+              <p class="descricao-projeto">Uma Pokédex interativa que consome a PokeAPI para exibir informações, sprites animados e dados de mais de 600 Pokémon. Desenvolvida com foco em manipulação do DOM e requisições assíncronas em JavaScript.</p>
+              <div class="tags-projeto"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <a href="https://github.com/raaulrodrigues/Pokedex" target="_blank" class="btn-projeto">Ver no GitHub
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
             </div>
-        </section>
-        
-        <section id="habilidades">
-            <div class="container">
-                <h2>Habilidades</h2>
-                <div class="habilidades-grid">
-                    <div class="habilidade-item">Java</div>
-                    <div class="habilidade-item">C#</div>
-                    <div class="habilidade-item">Python</div>
-                    <div class="habilidade-item">HTML & CSS</div>
-                    <div class="habilidade-item">JavaScript</div>
-                    <div class="habilidade-item">SQL</div>
-                    <div class="habilidade-item">Git & GitHub</div>
-                    <div class="habilidade-item">Spring Boot</div>
-                </div>
+            <div class="imagem-container-projeto"><img src="./assets/images/Pokedex.png" alt="Imagem do Projeto Pokédex" /></div>
+          </div>
+
+          <div class="projeto-card-novo">
+            <div class="texto-projeto">
+              <h3>Bookshelf App</h3>
+              <p class="descricao-projeto">Um aplicativo web desenvolvido no programa Desenvolve para gerenciar e avaliar livros. Permite cadastrar, visualizar e favoritar obras de forma simples, moderna e intuitiva.</p>
+              <div class="tags-projeto"><span>React</span><span>JavaScript</span><span>Tailwind CSS</span><span>Firebase</span></div>
+              <div class="links-projeto">
+                <a href="https://bookshelf-app-final-yox6.vercel.app" target="_blank" class="btn-projeto">Ver Projeto Online
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7M21 3L10 14"></path><path d="M5 10v11h11"></path></svg>
+                </a>
+                <a href="https://github.com/raaulrodrigues/bookshelf-app-final" target="_blank" class="btn-projeto">Ver no GitHub
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
             </div>
-        </section>
+            <div class="imagem-container-projeto"><img src="./assets/images/bookshelf.jpg" alt="Imagem do Projeto Bookshelf App" /></div>
+          </div>
 
-        <section id="projetos">
-            <div class="container">
-                <h2>Meus Projetos</h2>
-                <div class="projetos-container">
-
-                    <div class="projeto-card-novo">
-                        <div class="texto-projeto">
-                            <h3>Sistema de Xadrez</h3>
-                            <p class="descricao-projeto">
-                                Um jogo de xadrez completo construído em Java com interface gráfica, focado na lógica e nas regras do jogo.
-                            </p>
-                            <div class="tags-projeto">
-                                <span>Java</span>
-                                <span>OOP</span>
-                            </div>
-                            <a href="https://github.com/raaulrodrigues/Xadrez.git" target="_blank" class="btn-projeto">
-                                Ver no GitHub
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            </a>
-                        </div>
-                        <div class="imagem-container-projeto">
-                            <img src="/xadrez.jpg" alt="Imagem do Projeto Xadrez">
-                        </div>
-                    </div>
-
-                    <div class="projeto-card-novo">
-                        <div class="texto-projeto">
-                            <h3>Pokedex</h3>
-                            <p class="descricao-projeto">
-                                Uma Pokédex interativa que consome a PokeAPI para exibir informações, sprites animados e dados de mais de 600 Pokémon. Desenvolvida com foco em manipulação do DOM e requisições assíncronas em JavaScript.
-                            </p>
-                            <div class="tags-projeto">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <a href="https://github.com/raaulrodrigues/Pokedex" target="_blank" class="btn-projeto">
-                                Ver no GitHub
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            </a>
-                        </div>
-                        <div class="imagem-container-projeto">
-                            <img src="./Pokedex.png" alt="Imagem do Projeto Pokédex">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="contato">
-            <div class="container">
-                <h2>Entre em Contato</h2>
-                <p>Estou aberto a novas oportunidades e colaborações. Vamos conversar!</p>
-                
-                <div class="contatos-wrapper">
-                    <a href="mailto:rm.rodrigues0307@gmail.com" target="_blank" class="contato-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <span>E-mail</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/raaul-rodriguees/" target="_blank" class="contato-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://wa.me/5516997542792" target="_blank" class="contato-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        <span>Telefone</span>
-                    </a>
-                    <a href="https://github.com/raaulrodrigues" target="_blank" class="contato-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        <span>GitHub</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Raul Rodrigues. Todos os direitos reservados.</p>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
+    <section id="contato">
+      <div class="container">
+        <h2>Entre em Contato</h2>
+        <p>Estou aberto a novas oportunidades e colaborações. Vamos conversar!</p>
+        <div class="contatos-wrapper">
+          <a href="mailto:rm.rodrigues0307@gmail.com" target="_blank" class="contato-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span>E-mail</span>
+          </a>
+          <a href="https://www.linkedin.com/in/raaul-rodriguees/" target="_blank" class="contato-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><span>LinkedIn</span>
+          </a>
+          <a href="https://wa.me/5516997542792" target="_blank" class="contato-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>Telefone</span>
+          </a>
+          <a href="https://github.com/raaulrodrigues" target="_blank" class="contato-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Raul Rodrigues. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>

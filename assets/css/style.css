@@ -157,6 +157,12 @@ header nav ul li a:hover {
     margin-top: 3rem;
 }
 
+#projetos .links-projeto {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 #projetos .projeto-card-novo {
     display: flex;
     align-items: center;
